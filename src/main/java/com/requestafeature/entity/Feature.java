@@ -1,5 +1,6 @@
 package com.requestafeature.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,4 +24,9 @@ public class Feature {
 
     @Column(name = "feature", nullable = false)
     private String suggestedFeature;
+
+    @ManyToOne
+    @JoinColumn(name = "company_id")
+    @JsonBackReference
+    private Company company;
 }
