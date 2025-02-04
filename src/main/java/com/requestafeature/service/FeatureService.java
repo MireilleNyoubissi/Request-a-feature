@@ -4,6 +4,6 @@ import com.requestafeature.entity.Feature;
 import com.requestafeature.payload.FeatureDto;
 
 public interface FeatureService {
-    Feature createFeature(FeatureDto featureDto);
+    Feature createFeature(FeatureDto featureDto) throws Exception;
 
 }
