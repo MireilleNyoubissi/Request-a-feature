@@ -9,6 +9,7 @@ import com.requestafeature.service.FeatureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -37,5 +38,10 @@ public class FeatureServiceImpl implements FeatureService {
 
         return feature;
 
+    }
+
+    @Override
+    public List<Feature> findAllFeaturesByCompany(Integer companyId) {
+        return featureRepository.findAll();
     }
 }
