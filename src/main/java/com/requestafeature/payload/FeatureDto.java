@@ -8,5 +8,6 @@ public class FeatureDto {
     private String title;
     private String problemDescription;
     private String suggestedFeature;
+    private int companyId;
 }
 
