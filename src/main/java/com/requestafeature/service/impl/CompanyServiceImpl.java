@@ -17,6 +17,11 @@ public class CompanyServiceImpl implements CompanyService {
     CompanyRepository companyRepository;
 
     @Override
+    public List<Company> findAllCompanies() {
+        return companyRepository.findAll();
+    }
+
+    @Override
     public Company createCompany(CompanyDto companyDto) {
         //Convert DTO to entity
         Company company = new Company();
